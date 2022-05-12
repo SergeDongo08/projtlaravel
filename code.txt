@@ -1,0 +1,2 @@
+php artisan make:model Nom_du_model -mcr
+La commande qui crée la table, le modèle et le controller
