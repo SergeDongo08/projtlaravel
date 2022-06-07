@@ -7,6 +7,10 @@
   {{-- <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css"> --}}
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
   <link rel="icon" href="{{ asset('images/ic.png') }}">
   <style>
@@ -479,16 +483,16 @@ header .nav-bar{
 
     <header>
         <div class="nav-bar">
-          <a href="#" class="logo">{{ config('app.name', 'Laravel') }}</a>
+          <a href="#" style="color: #9AB87A" class="logo">{{ config('app.name', 'Laravel') }}</a>
            @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                        <a href="{{ url('/home') }}" class="btn btn-outline-success">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                        <a href="{{ route('login') }}" class="btn btn-outline-success">Log in</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                            <a href="{{ route('register') }}" class="btn btn-outline-success">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -524,7 +528,7 @@ header .nav-bar{
 
   <section class="about section">
     <h2 style="text-align: center"><span>CoopApp</span> cooperative management</h2>
-    {{-- <p>Make a descritpion</p> --}}
+    <p style="text-align: center">Business and/or cooperative management system (can be used in all areas where management is involved)</p>
 
 
   </section>

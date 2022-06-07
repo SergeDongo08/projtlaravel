@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('secondName');
             $table->string('email')->unique();
-            $table->string('gender')->nullable();
-            $table->string('fonction')->nullable();
-            $table->string('number')->nullable();
-            $table->string('image');
+            $table->string('gender');
+            $table->string('fonction');
+            $table->string('number');
+            $table->string('image')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

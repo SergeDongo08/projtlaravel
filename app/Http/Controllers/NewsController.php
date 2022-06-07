@@ -65,10 +65,12 @@ class NewsController extends Controller
     //edit
     public function editnews(Request $request, $id){
 
-        $news = news::find($id);
+        $news = News::find($id);
 
+
+        // $pv = time().'.'.$request->file('note_reunion')->getClientOriginalExtension();
        //update d'image
-     $updateImageName = time().'-'.'2'. '.'.$request->image_news->extension();
+     $updateImageName = time().'2'. '.'.$request->file('image_news')->getClientOriginalExtension();
 
      $request->image_news->move(public_path('pictures_news'), $updateImageName);
 
